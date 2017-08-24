@@ -1,265 +1,415 @@
-.bgbody {
-    background: rgb(44, 48, 73)
+.bgbody{
+	 background: rgb(44, 48, 73);
+	 overflow: scroll;
+	 text-align: center;
+	 margin: 0;
 }
-/*Originally background: rgb(46, 51, 77)*/
+/*Originally	 background: rgb(46, 51, 77)*/
 
-/* Logo and Navigation Menu */
-
+/*Logo and Navigation Menu*/
 #logo {
-    background: url(topbar.png);
-    background-size: 100%;
+ width: 75%;
+ image-smoothing: antialiased;
 }
-.navfont {
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 18pt;
-    border: 3px solid black;
+#logo2{
+ display:none;
+ image-smoothing: antialiased;	
+}	
+.navfont{
+ font-family:'Oswald','Segoe UI';	
+ color:white;
+ border: 3px solid black;
 }
-.navfont:hover {
-    font-family: 'Oswald', sans-serif;
-    font-size: 18pt;
-    border: 3px solid white;
+/*RESPONSIVE FEATURES      */
+#more{
+    display: none;
 }
-.navbar {
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 16pt;
-    border: 3px solid black;
-    border: 2px solid;
-    /*
-	border-radius: 18px;
-	padding:10px;
-	padding-left:15px;
-	padding-right:15px;
-	padding-right:25px;
-	padding-left:25px;
-	*/
-    background: black;
-}
-.item {
-    /*Icons on Navbar*/
+@media screen and (max-width: 360px) {
+  .btntext{display:none;}
+  .texts{display:none;}
 
-    width: 52px;
 }
-.navbar:hover {
-    /*FAQ,DOWNLOADS,MANUAL etc.*/
+.cent{
+ float:center;
+ margin:auto;	
+}
 
-    font-size: 18pt;
+
+li>a{
+  display:block;
 }
-#navigation {
-    padding-left: 15%;
-    padding-right: 15%;
+
+.homevideo{
+	max-width: 100%
 }
-.texts {
+@media screen and (max-width: 1000px) {
+	.btntext{font-size:16pt;}
+  #home{float:left;content:""; }
+  #about{float:left;content:"";}
+  #community{float:left;content:"";}
+  #news{float:left;content:"";}
+  #uselinks{float:left;content:"";}
+  
+  #faq{float:left;}
+  #downloads{:left;}
+  #development{float:left;}
+  #manual{float:left;}
+  #discord{float:left;} 
+ #logo{display:none;}
+ #logo2{display:inline-block;}
+}
+/*RESPONSIVE FEATURES END*/
+.navfont:hover{
+ font-family:'Oswald','Segoe UI';	
+ border: 3px solid white;
+}
+.navbar{
+ font-family:'Oswald','Segoe UI';	
+ color:white;
+ font-size:16pt;
+ border: 3px solid black;
+ border: 2px solid;
+ background:black;
+
+}
+
+ul#navigation{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+li.navigationmenu {
+    float: left;
+    background-color: black;
     color: white;
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 16pt;
+	margin-left: 3px;
     padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background: black;
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    font-size: 20pt;
+    font-family: 'Oswald','Segoe UI';
+    min-width: 176px;
+    max-width: 176px;
+    display: inline-block;
 }
-.btntext {
+
+li.navigationmenu.two{
+	background-color: black;
+	border-color: white;
+	min-width: 181px;
+	max-width: 181px;
+}
+
+.navigationmenu img{
+	width: 39px;
+    float: left;
+}
+
+li.navigationmenu.two img {
+	width:40px;
+	float:left;
+}
+
+@media (max-width:553px){
+	li.navigationmenu {
+    float: left;
+    background-color: black;
     color: white;
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 22pt;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
     padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    font-size: 20pt;
+    font-family: 'Oswald','Segoe UI';
+	min-width: 42%;
+    max-width: 42%
+    display: inline-block;
+}
 }
 
-/* Navigation Menu sectioning */
-
-#home {
-    width: 10%;
-    background: rgb(0, 162, 232);
-}
-#home:hover {
-    background: rgb(51, 204, 255);
-}
-#about {
-    background: rgb(230, 0, 0);
-}
-#about:hover {
-    background: rgb(255, 77, 77);
-}
-#community {
-    background: rgb(255, 173, 51);
-}
-#community:hover {
-    background: rgb(255, 214, 51);
-}
-#news {
-    background: rgb(0, 153, 0);
-}
-#news:hover {
-    background: rgb(0, 204, 0);
-}
-#uselinks {
-    background: rgb(38, 38, 38);
-}
-#uselinks:hover {
-    background: rgb(166, 166, 166);
+li.navigationmenu.two.faq:hover{
+	background-color: rgb(255,51,51);
 }
 
-/* Bottom navigation */
-
-#discord:hover {
-    color: black;
-    background: rgb(204, 115, 186);
-}
-#development:hover {
-    color: black;
-    background: rgb(181, 230, 29);
-}
-#faq:hover {
-    color: black;
-    background: rgb(255, 51, 51);
-}
-#downloads:hover {
-    color: black;
-    background: rgb(255, 215, 20);
-}
-#manual:hover {
-    color: black;
-    background: rgb(80, 206, 246);
-}
-#dls:hover {
-    color: black;
-    background: orange;
+li.navigationmenu.two.man:hover{
+	background-color: rgb(80,206,246);
 }
 
-/* GENERAL */
-
-hr {
-    width: 75%;
-    height: 10px;
-    color: white;
-    background: white;
-	border: 2px
-}
-hr.tophr {
-    /*HR DIVIDERS*/
-
-    width: 73%;
-    height: 5px;
-    color: white;
+li.navigationmenu.two.dow:hover{
+	background-color: rgb(255,215,20);
 }
 
-hr#footerhr {
-	width: 50%;
-    height: 3px;
-    color: white;
-	background: white;
-	margin-top: 80px;
-	margin-bottom: 30px;
-};
-
-div {} a {
-    /*LINKS*/
-
-    color: white;
-    text-decoration: none;
-}
-.outlink {
-    color: teal;
-    text-decoration: underline;
-}
-h1 {
-    /*TITLE HEADERS*/
-
-    font-family: 'Oswald', sans-serif;
-    color: white;
-}
-h2 {
-    /*SUBHEADER*/
-
-    font-family: 'Lato', sans-serif;
-    color: white;
-}
-h3 {
-    /*SUBHEADER*/
-
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 14pt;
-}
-h4 {
-    /*QUESTIONS/INQUIRY TEXT*/
-
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 16pt;
-}
-p {
-    /*MAIN TEXT CONTENT*/
-
-    font-family: 'Lato', sans-serif;
-    color: white;
-	position: relative;
-    padding-left: 2.5%;
-	padding-right: 2.5%;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 1em;
-    -webkit-font-smoothing: antialiased;
-}
-#disclaimer {
-    /*FOOTER TEXTS*/
-
-    font-family: 'Lato', sans-serif;
-    color: white;
-    font-size: 0.7em;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-pre {
-    font-family: 'Lato', sans-serif;
-    color: white;
-    padding-left: 12.5%;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 16pt;
-    -webkit-font-smoothing: antialiased;
+li.navigationmenu.two.dis:hover{
+	background-color: rgb(204,115,186);
 }
 
-/* MAIN PAGE CONTENTS */
+li.navigationmenu.two.dev:hover{
+	background-color: rgb(181,230,29);
+}
 
-#bgimage {
-    width: 75%
+li.navigationmenu:hover{
+border-color:white;
 }
-#ssk {
-    width: 75%
+
+li.navigationmenu.new{
+	background-color: rgb(0, 153, 0);
 }
-.answer {
-    color: rgb(255, 209, 53);
+
+li.navigationmenu.abo{
+	background-color: rgb(230, 0, 0);
 }
-.notice {
-    color: rgb(230, 0, 0);
+
+li.navigationmenu.hom{
+	background-color: rgb(0, 162, 232);
 }
-#downloadheader {
-    background: rgb(255, 215, 20);
+
+li.navigationmenu.com{
+	background-color: rgb(255, 173, 51);
 }
-#manualheader {
-    background: rgb(80, 206, 246);
+
+li.navigationmenu.use{
+	background-color: rgb(38, 38, 38);
 }
-#discordheader {
-    background: rgb(204, 115, 186);
+
+.item{/*Icons on Navbar*/
+width:52px;	
+
 }
-#faqheader {
-    background: rgb(255, 51, 51);
+.navbar:hover{/*FAQ,DOWNLOADS,MANUAL etc.*/
+font-size:18pt;	
+
 }
-#devheader {
-    background: rgb(181, 230, 29);
+.navigation{
+ padding-left:15%;
+ padding-right:15%;
+ overflow:hidden;
+ 
 }
-.tabletext {
-    background: rgb(38, 38, 38);
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 16pt;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+.texts{
+ color:white;
+ font-family:'Oswald','Segoe UI';	
+ color:white;
+ font-size:16pt;
+ padding:10px;
+ padding-left:15px;
+ padding-right:15px;
+ background:black;
 }
+.btntext{
+ font-size:20pt;
+ color:white;
+ font-family:'Oswald','Segoe UI';	
+ color:white;
+ padding:10px;
+ padding-left:15px;
+ padding-right:15px;
+}
+/*         Navigation Menu sectioning     */
+#home{
+	font-size:22pt;
+	background: rgb(0, 162, 232);
+}
+#home:hover{
+background:rgb(51, 204, 255);
+}
+#about{
+	 font-size:22pt;
+	background:rgb(230, 0, 0);
+}
+#about:hover{
+background:rgb(255, 77, 77);
+}
+#community{
+	 font-size:22pt;
+	background:rgb(255, 173, 51);
+}
+#community:hover{
+background:rgb(255, 214, 51);
+}
+#news{
+	 font-size:22pt;
+	background:rgb(0, 153, 0);
+}
+#news:hover{
+background:rgb(0, 204, 0);
+}
+	
+#uselinks{
+	 font-size:22pt;
+	background:rgb(38, 38, 38);
+	font-size:10pt;
+}
+#more{
+	font-size:22pt;
+	background:rgb(38, 38, 38);
+}
+#more:hover{
+background:rgb(166, 166, 166);
+}
+#uselinks:hover{
+background:rgb(166, 166, 166);
+}
+/*Bottom navigation*/
+#discord:hover{
+color:black;
+background:rgb(204,115,186);
+}
+#development:hover{
+color:black;
+background:rgb(181,230,29);
+}
+#faq:hover{
+color:black;
+background:rgb(255,51,51);
+}
+#downloads:hover{
+color:black;
+background:rgb(255,215,20);
+}
+#manual:hover{
+color:black;
+background:rgb(80,206,246);
+}
+#dls:hover{
+color:black;
+background:orange;
+}
+		
+/*                     GENERAL                 */
+
+hr{
+width:75%;
+height:10px;
+color:white;
+border:2px;
+border-color:orange;
+background:orange;	
+}
+hr.tophr{/*HR DIVIDERS*/
+width:73%;
+height:5px;
+color:white;
+border:2px;
+border-color:orange;
+background:white;	
+}	
+.marquee{/*HR DIVIDERS*/
+width:60%;
+height:5px;
+color:orange;
+border:2px;
+border-color:orange;
+background:orange;	
+}
+
+a{/*LINKS*/
+color:white;
+text-decoration: none;
+}
+.outlink{
+color:gold;
+text-decoration: underline;
+
+}	
+h1{/*TITLE HEADERS*/
+ font-family:'Oswald','Segoe UI';		
+ color:white;
+ padding-left:25%;
+ padding-right:25%;
+}
+h2{/*SUBHEADER*/
+ font-family: 'Lato', sans-serif;	
+ color:white;
+}
+h3{/*SUBHEADER*/
+ font-family: 'Oswald', sans-serif;	
+ color:white;
+ font-size:14pt;
+}
+h4{/*QUESTIONS/INQUIRY TEXT*/
+ font-family: 'Oswald', sans-serif;	
+ color:white;
+ font-size:16pt;
+}
+p{/*MAIN TEXT CONTENT*/
+ font-family: 'Lato', sans-serif;		
+ color:white;
+ padding-left:12.5%;
+ padding-right:12.5%;
+ text-align: justify;
+
+ font-size:18pt;
+ -webkit-font-smoothing: antialiased;
+}
+h5{/*FOOTER TEXTS*/
+ font-family: 'Lato', sans-serif;	
+ color:white;
+ font-size:8pt;
+}
+pre{/*DISPLAY AS IS*/
+  font-family: 'Lato', sans-serif;		
+ color:white;
+ padding-left:8.5%;
+ padding-right:50%;
+ word-wrap:true;
+ text-align: justify;
+ text-justify: inter-word;
+ font-size:16pt;
+ -webkit-font-smoothing: antialiased;
+}	
+/*MAIN PAGE CONTENTS*/
+#bgimage{
+width:70%
+}	
+#ssk{
+width:60%
+}	
+.answer{
+ color:rgb(255,209,53);	
+}
+.notice{
+	color:rgb(230, 0, 0);
+}
+#downloadheader{
+background:rgb(255,215,20);
+
+}
+#manualheader{
+background:rgb(80,206,246);
+
+}	
+#discordheader{
+background:rgb(204,115,186);
+
+}
+#faqheader{
+background:rgb(255,51,51);
+
+}	
+#devheader{
+background:rgb(181,230,29);
+
+}	
+.tabletext{
+	background:rgb(38, 38, 38);	
+	 color:white;
+ font-family:'Oswald','Segoe UI';	
+ font-size:16pt;
+ padding:10px;
+ padding-left:15px;
+ padding-right:15px;
+
+}	
+.listed{
+padding-left:5%;
+padding-right:5%;		
+text-align:center;
+
+}	
