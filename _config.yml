@@ -1,0 +1,14 @@
+title: Attorney Online
+description: >
+  Attorney Online is a live, off-the-cuff online roleplaying simulator,
+  where you can play as your favorite characters from the Ace Attorney series
+  and other games. Turnabouts, cross-examinations, and objections are all just
+  a few fingertips away.
+baseurl: ""
+url: "http://aceattorneyonline.com"
+github_username: Attorney-Online-Engineering-Task-Force
+
+include: ['_pages']
+markdown: kramdown
+kramdown:
+  input: GFM
