@@ -22,7 +22,7 @@
 
 <a href="https://discord.gg/jNtMrzq">
 <div id="playol">
-<img id="ico" src="{{ '/misc/game.svg' | prepend: site.baseurl }}"/>
+<img id="ico" src="{{ '/global/game.svg' | prepend: site.baseurl }}"/>
 <tt id="context">PLAY ONLINE</tt></a>
 </div>
 
@@ -30,13 +30,12 @@
 <!--This is the navigation bar/menu -->
 <nav>
 <ul id="navigation">
-<!--
 {% for some_page in site.pages %}
 {% if some_page.title %}
-<li class="navigationmenu {% some_page.title[0..2] %}" {% if some_page.url == page.url %} id="selected" {% endif %}>
-<a href="{% some_page.url %}"><img src="{% some_page.url + '/' + some_page.layout + '.svg' %}" />{% some_page.title %}</a></li>
+<li class="navigationmenu {{ some_page.title | truncate: 3, "" | downcase }}" {% if some_page.url == page.url %} id="selected" {% endif %}>
+  <a href="{{ some_page.url }}"><img src="{{ some_page.url | append: some_page.title | downcase | append: '.svg' }}" />{{ some_page.title }}</a>
+</li>
 {% endif %} {% endfor %}
--->
 <li class="navigationmenu hom" id="selected"><a href="../home/index.html"><img src="../home/home.svg" /> HOME</a></li>
 <li class="navigationmenu abo"><a href="../about/index.html"><img src="../about/about.svg" /> ABOUT</a></li></a>
 <li class="navigationmenu new"><a href="../news/index.html"><img src="../news/news.svg" /> NEWS</a></li></a>
