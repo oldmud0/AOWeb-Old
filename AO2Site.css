@@ -11,12 +11,12 @@
     background: linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
 }
 
-#wrapper{
+article {
 color:white;
 background-color:rgb(16, 16, 16);	
 }	
 @media(min-width:1000px){
-#wrapper{
+article {
 color:white;
 background-color:rgb(16, 16, 16);	
 margin-left:17.2%;

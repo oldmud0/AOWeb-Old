@@ -1,0 +1,17 @@
+---
+permalink: "/news/"
+layout: default
+navicon: "news.svg"
+internal_title: "news"
+short_title: "News"
+title:  "News"
+---
+
+{% assign sorted = site.posts | sort: 'date' | reverse %}
+{% for post in sorted %}
+	<div id="article1">
+	<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+	<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+	{{ post.content }}
+	</div>
+{% endfor %}
