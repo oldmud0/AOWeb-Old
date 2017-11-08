@@ -5,7 +5,7 @@ date: 2017-07-28 11:05:01 -0600
 categories: front
 ---
 
-<img src="../home/DRvAO.png" id="bgimage">
+<img src="/home/DRvAO.png" id="bgimage">
 
 Following the late release of AO2 comes the beloved feature of making custom themes for the client.
 
