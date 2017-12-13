@@ -31,31 +31,35 @@
 <nav>
 <ul id="navigation">
 {% for some_page in site.pages %}
-{% if some_page.internal_title %}
+{% if some_page.internal_title and some_page.category contains "toplevel" %}
 <li class="navigationmenu {{ some_page.internal_title | truncate: 3, "" | downcase }}" {% if some_page.url == page.url %} id="selected" {% endif %}>
 	<a href="{{ some_page.url }}">
 		<img src="{{ some_page.url | append: some_page.navicon }}" />{{ some_page.short_title | upcase }}</a>
 </li>
 {% endif %}
 {% endfor %}
-
-<!--
-<li class="navigationmenu hom"><a href="../home/index.html"><img src="../home/home.svg" /> HOME</a></li>
-<li class="navigationmenu abo"><a href="../about/index.html"><img src="../about/about.svg" /> ABOUT</a></li></a>
-<li class="navigationmenu new"><a href="../news/index.html"><img src="../news/news.svg" /> NEWS</a></li></a>
-<li class="navigationmenu com"><a href="../community/index.html"><img src="../community/community.svg" /> COMMUNITY</a></li>
-<li class="navigationmenu use"><a href="../uselinks/index.html"><img src="../uselinks/uselinks.svg" /> USEFUL LINKS</a></li>
 </ul>
--->
 
-</nav>
-<nav>
 <ul id="navigation">
+{% for some_page in site.pages %}
+{% if some_page.internal_title and some_page.category contains "midlevel" %}
+<li class="navigationmenu two {{ some_page.internal_title | truncate: 3, "" | downcase }}" {% if some_page.url == page.url %} id="selected" {% endif %}>
+	<a href="{{ some_page.url }}">
+		<img src="{{ some_page.url | append: some_page.navicon }}" />{{ some_page.short_title | upcase }}
+	</a>
+</li>
+{% endif %}
+{% endfor %}
+<!--
 <li class="navigationmenu two faq"><a href="/faq/index.html"><img src="/faq/faq.svg" /><span class="navtext"> FAQ</span></a></li>
 <li class="navigationmenu two man"><a href="/manual/index.html"><img src="/manual/manual.svg" /><span class="navtext"> MANUAL</span></a></li>
 <li class="navigationmenu two dow"><a href="/downloads/index.html"><img src="/downloads/downloads.svg" /> DOWNLOADS</span></li></a>
 <li class="navigationmenu two dis"><a href="/discord/index.html"><img src="/discord/discord.svg" /><span class="navtext"> DISCORD</span></a></li>
 <li class="navigationmenu two dev"><a href="/development/index.html"><img src="/development/development.svg" /><span class="navtext"> DEVELOPMENT</span></a></li>
-</ul>	
+-->
+</ul>
+</nav>
+
+<nav>
 
 </nav>
