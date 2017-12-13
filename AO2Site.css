@@ -1,15 +1,14 @@
 .bgbody{
-	
-	 overflow: scroll;
-	 text-align: center; 
-	 list-style-position: inside;
-	 margin: 0;
-	 		transition: 0.5s;
-			    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
-    background: -moz-linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
-    background: linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
+	overflow: scroll;
+	/* text-align: center; */
+	list-style-position: inside;
+	margin: 0;
+	transition: 0.5s;
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
+	background: -moz-linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
+	background: linear-gradient(rgb(44, 48, 73), rgb(16, 16, 16)); /* For Safari 5.1 to 6.0 */
 }
 
 article {
@@ -87,7 +86,8 @@ body,hr,h1,h2,h3,p,h4,h5,a,img,tt  {
 }
 #logo2{
  display:none;
- image-smoothing: antialiased;	
+ image-smoothing: antialiased;
+ margin: auto;
 }	
 .navfont{
  font-family:'Oswald','Segoe UI';	
@@ -112,10 +112,22 @@ li>a{
   display:block;
 }
 
-.homevideo{
-	max-width: 100%
-
+/* https://stackoverflow.com/a/38270745/2958458 */
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin: auto;
 }
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (max-width: 1000px) {
 	.btntext{font-size:16pt;}
   #home{float:left;content:""; }
@@ -130,7 +142,7 @@ li>a{
   #manual{float:left;}
   #discord{float:left;} 
  #logo{display:none;}
- #logo2{display:inline-block;}
+ #logo2{display: block;margin: auto;}
 }
 /*RESPONSIVE FEATURES END*/
 
@@ -215,30 +227,33 @@ li.navigationmenu.two{
 	transition: 0.5s;
 }
 
-li.navigationmenu.two.faq:hover{
+li.navigationmenu.two.faq:hover,li.navigationmenu.two.faq#selected{
 	background-color: rgb(80,206,246);
 	transition: 0.5s;
 }
-li.navigationmenu.two.man:hover{
-	background-color: rgb(255,51,51);
+li.navigationmenu.two.man:hover,li.navigationmenu.two.man#selected{
+	background-color: #795548;
 	transition: 0.5s;
 }
-li.navigationmenu.two.dow:hover{
-	background-color: orange;
+li.navigationmenu.two.dow:hover,li.navigationmenu.two.dow#selected{
+	background-color: #cc2727;
 	transition: 0.5s;
 }
-li.navigationmenu.two.dis:hover{
+li.navigationmenu.two.dis:hover,li.navigationmenu.two.dis#selected{
 	background-color: rgb(204,115,186);
 	transition: 0.5s;
 }
-li.navigationmenu.two.dev:hover{
-	background-color: rgb(181,230,29);
+li.navigationmenu.two.dev:hover,li.navigationmenu.two.dev#selected{
+	background-color: rgb(150, 177, 67);
 	transition: 0.5s;
 }
 li.navigationmenu:hover{
 border-color:white;
 padding-bottom:10px;
 transition: 0.5s;
+}
+li.navigationmenu#selected {
+	border-color:white;
 }
 li.navigationmenu{
 transition: 0.5s;
@@ -247,13 +262,13 @@ li.navigationmenu.new{
 	background-color: rgb(0, 153, 0);
 }
 li.navigationmenu.abo{
-	background-color: rgb(230, 0, 0);
+	background-color: rgb(183, 57, 27);
 }
 li.navigationmenu.hom{
 	background-color: rgb(0, 162, 232);
 }
 li.navigationmenu.com{
-	background-color: rgb(255, 173, 51);
+	background-color: rgb(95, 58, 152);
 }
 li.navigationmenu.use{
 	background-color: rgb(38, 38, 38);
@@ -263,10 +278,12 @@ li.navigationmenu.use{
 width:52px;	
 
 }
-.navbar:hover{/*FAQ,DOWNLOADS,MANUAL etc.*/
-font-size:18pt;	
 
+.inline-button {
+	margin: auto
 }
+
+.navbar:hover{/*FAQ,DOWNLOADS,MANUAL etc.*//* font-size:18pt; */}
 .navigation{
  padding-left:15%;
  padding-right:15%;
@@ -384,14 +401,16 @@ transition: 0.7s;
 }
 #register{
 	float:left;
-width:50px;
-height:60px;
-background:rgb(255,51,51);
-padding:5px;
-padding-bottom:12px;
-transition: 0.7s;
-color:white;
-margin-bottom:20px;border:white;border-width:2px;
+	width:50px;
+	height:60px;
+	background:rgb(255,51,51);
+	padding:5px;
+	padding-bottom:12px;
+	transition: 0.7s;
+	color:white;
+	margin-bottom:20px;
+	border:white;
+	border-width:2px;
 }
 
 #support{
@@ -496,11 +515,7 @@ transition: 0.7s;
 color:black;
 background:rgb(181,230,29);
 }
-#faq:hover{
-transition: 0.7s;	
-color:black;
-background:rgb(255,51,51);
-}
+#faq:hover{transition: 0.7s;color:black;background: rgb(255,51,51);}
 #downloads:hover{
 transition: 0.7s;
 color:black;
@@ -515,9 +530,6 @@ background:rgb(80,206,246);
 transition: 0.7s;	
 color:black;
 background:orange;
-}
-#selected{
-background:rgb(109, 109, 109);
 }
 		
 /*                     GENERAL                 */
@@ -557,10 +569,10 @@ text-decoration: underline;
 
 }	
 h1{/*TITLE HEADERS*/
- font-family:'Oswald','Segoe UI';		
+ font-family:'Oswald','Segoe UI';
  color:white;
- padding-left:25%;
- padding-right:25%;
+ padding-left: 12.5%;
+ padding-right: 12.5%;
 }
 h2{/*SUBHEADER*/
  font-family: 'Lato', sans-serif;	
@@ -586,7 +598,7 @@ p{/*MAIN TEXT CONTENT*/
  font-size:16pt;
  -webkit-font-smoothing: antialiased;
 }
-h5{/*FOOTER TEXTS*/
+#footer > p {/*FOOTER TEXTS*/
  font-family: 'Lato', sans-serif;	
  color:white;
  font-size:8pt;
@@ -613,12 +625,9 @@ width:60%
  color:rgb(255,209,53);	
 }
 .notice{
-	color:rgb(230, 0, 0);
+	color: rgb(239, 60, 98);
 }
-#downloadheader{
-background:orange;
-
-}
+#downloadheader{background: #e89c0f;color: black;text-align: center;}
 #manualheader{
 background:rgb(80,206,246);
 

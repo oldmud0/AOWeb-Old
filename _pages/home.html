@@ -8,7 +8,9 @@ title:  "Attorney Online 2 is Live!"
 category: toplevel
 ---
 
-<iframe class="homevideo" width="72%" height="62%" src="https://www.youtube.com/embed/bLSQ5zCcR-U?rel=0 " frameborder="0" allowfullscreen></iframe>
+<div class="videoWrapper"> 
+<iframe width="72%" height="62%" src="https://www.youtube.com/embed/bLSQ5zCcR-U?rel=0 " frameborder="0" allowfullscreen></iframe>
+</div>
 
 <br>
 
@@ -16,10 +18,9 @@ category: toplevel
 {% for post in sorted limit: 1 %}
 	<div id="article1">
 	<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
-	<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+	<p><time>{{ post.date | date: "%b %-d, %Y" }}</time></p>
 	{{ post.content }}
 	</div>
 {% endfor %}
 
-<br>
-<h2><a href="/news/">More news&hellip;</a></h2>
+<center><h2><a href="/news/">More news&hellip;</a></h2></center>
