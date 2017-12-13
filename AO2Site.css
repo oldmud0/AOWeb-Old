@@ -231,10 +231,11 @@ li.navigationmenu.two.man:hover,li.navigationmenu.two.man#selected{
 	background-color: #795548;
 	transition: 0.5s;
 }
-li.navigationmenu.two.dow:hover,li.navigationmenu.two.dow#selected{
-	background-color: #cc2727;
-	transition: 0.5s;
+
+li.navigationmenu.two.use:hover,li.navigationmenu.two.use#selected{
+	background-color: rgb(38, 38, 38);
 }
+
 li.navigationmenu.two.dis:hover,li.navigationmenu.two.dis#selected{
 	background-color: rgb(204,115,186);
 	transition: 0.5s;
@@ -266,8 +267,8 @@ li.navigationmenu.hom{
 li.navigationmenu.com{
 	background-color: rgb(95, 58, 152);
 }
-li.navigationmenu.use{
-	background-color: rgb(38, 38, 38);
+li.navigationmenu.dow{
+	background-color: #cc2727;
 }
 
 .item{/*Icons on Navbar*/
