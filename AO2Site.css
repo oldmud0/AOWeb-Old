@@ -308,12 +308,7 @@ width:52px;
 .btntext:hover span {
   padding-right: 25px;
 }
-tt{
-font-family: 'Raleway', sans-serif;		
- color:black;
- font-size:8pt;
- -webkit-font-smoothing: antialiased;
-}
+tt{/* font-family: 'Raleway', sans-serif; *//* color:black; *//* font-size:8pt; */-webkit-font-smoothing: antialiased;}
 @media(min-width:1550px){
 #register{
 width:50px;
@@ -648,3 +643,12 @@ padding-right:5%;
 text-align:center;
 
 }	
+
+div#footer {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+ul {
+    font-family: 'Raleway', sans-serif;
+}

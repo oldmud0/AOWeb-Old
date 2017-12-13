@@ -12,7 +12,7 @@ category: toplevel
 {% for post in sorted %}
 	<div id="article1">
 	<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
-	<p><time>{{ post.date | date: "%b %-d, %Y" }}</time></p>
+	<h3><time>{{ post.date | date: "%b %-d, %Y" }}</time></h3>
 	{{ post.content }}
 	</div>
 {% endfor %}
